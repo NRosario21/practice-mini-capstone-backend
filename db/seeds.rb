@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Movie.create(name: "Matrix", category: "Cyberpunk", year: 1999)
+Movie.create(name: "Legend", category: "Fantasy", year: 1986)
