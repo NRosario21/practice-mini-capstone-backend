@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/movies" => "movies#index"
   get "/movies" => "movies#show"
   post "/movies" => "movies#create"
+  post "/users" => "users#create"
   patch "/movies/:id" => "movies#update"
   delete "/movies/:id" => "movies#destroy"
 
