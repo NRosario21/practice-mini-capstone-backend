@@ -11,7 +11,7 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Movie.count", 1 do
-      post "/movies.json", params: { name: "lake", width: 800, height: 600 }
+      post "/movies.json", params: { name: "lake", category: "horror", year: 1980 }
       assert_response 200
     end
   end
