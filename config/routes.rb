@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/movies" => "movies#show"
   post "/movies" => "movies#create"
   patch "/movies/:id" => "movies#update"
+  delete "/movies/:id" => "movies#destroy"
 
   # Defines the root path route ("/")
   # root "posts#index"
