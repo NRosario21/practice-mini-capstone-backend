@@ -7,7 +7,8 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.create(
       name: params[:name],
-      category: params[:category],
+      category_id: params[:category_id],
+      image_url: params[:image_url],
       year: params[:year],
     )
     render :show
@@ -21,7 +22,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find_by(id: params[:id])
     @movie.update(
-      name: params[:name] || @photo.name,
+      name: params[:name] || @movie.name,
       category: params[:category] || @movie.category,
       year: params[:year] || @movie.year,
     )
