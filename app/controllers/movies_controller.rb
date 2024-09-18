@@ -5,13 +5,12 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.create(
-      name: params[:name],
-      category_id: params[:category_id],
-      image_url: params[:image_url],
-      year: params[:year],
-    )
-    render :show
+    @favorite = Favorite.create()
+    if @favorite.save
+      render json: { message: "Favorite added!" }, status: :ok
+    else
+      render json: { error: "Unable to add favorite" }, status: :unprocessable_entity
+    end
   end
 
   def show
